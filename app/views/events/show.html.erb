@@ -1,0 +1,17 @@
+<h1>Events#show</h1>
+
+Host: 
+<%= @event.host.username %>
+<br>
+<br>
+Guest List:
+<br>
+<% @attendees.each do |attendee| %>
+    <%= attendee.username %>
+<% end %>
+
+<% if signed_in? && current_user.id == @event.host.id %>
+    link_to "invite new guest", new_invitation_path
+    then, at invitation have radio buttons with each of current_user's current hosted parties
+    and checkboxes for each username
+<% end %>

@@ -1,0 +1,20 @@
+<h1>Events#index</h1>
+
+UPCOMING EVENTS
+<br>
+<% @upcoming_events.each do |event| %>
+    <%= event.description %>
+    -- Host: 
+    <%= event.host.username %>
+    <br>
+<% end %>
+
+<br>
+PAST EVENTS
+<br>
+<% @past_events.each do |event| %>
+    <%= event.description %>
+    -- Host: 
+    <%= event.host.username %>
+    <br>
+<% end %>

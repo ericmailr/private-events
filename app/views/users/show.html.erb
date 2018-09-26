@@ -1,0 +1,21 @@
+<h1>My Hosting Events</h1>
+
+<% @user.hosting_events.each do |event| %>
+    <%= link_to "#{event.description}", event %>
+<% end %>
+
+<h1>My Events</h1>
+
+UPCOMING EVENTS
+<br>
+<% @upcoming_events.each do |event| %>
+    <%= event.description %>
+    <br>
+<% end %>
+<br>
+PAST EVENTS
+<br>
+<% @past_events.each do |event| %>
+    <%= event.description %>
+    <br>
+<% end %>
